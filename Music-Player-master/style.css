@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background: none;
+    padding: 20px; /* Optional: Add some padding for spacing */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.music-player {
+    border-radius: 8px;
+    background: #f9f9f9;
+    width: 400px;
+    height: 160px;
+    padding: 20px 40px;
+    margin-bottom: -1%;
+    text-align: left;
+    position: relative;
+    border: #222222;
+    border-width: 2px;
+    border-style:double;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes rotate {
+    from { transform: translateY(-100%), rotate(0deg); }
+    to { transform: translateY(-100%), rotate(360deg); }
+}
+
+.music-player .song-img {
+    position: absolute;
+    top: -25%;
+    left: -40px;
+    transform: translateY(0%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.music-player h1 {
+    font-size: 20px;
+    font-weight: extra-bold;
+    color: #222222;
+    margin-left: 32px;
+    text-align: left;
+}
+
+#progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 75%;
+    height: 6px;
+    background-color: #f5e5e5;
+    border-radius: 4px;
+    cursor:pointer;
+    margin: 20px 0;
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #4D4C5F;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 7px solid #f5e5e5;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+#progress::-webkit-slider-thumb:hover {
+    background: #D38F8B;
+}
+
+#progress:hover {
+    background: #D38F8B;
+}
+
+/* Styles for the controls */
+.controls {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.controls div {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px; /* Add margin to create gap */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #4D4C5F;
+    cursor: pointer;
+}
+
+
+.controls div:hover {
+    background: #D38F8B;
+    transform: scale(1.2);
+    color: #f9f9f9;
+    transition-duration: 200ms;
+}
+
+
+.music-player .main-img {
+    position: absolute;
+    top: -25%;
+    right: -50px; /* Adjust this value based on your layout */
+    height: 125%;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    
+}
