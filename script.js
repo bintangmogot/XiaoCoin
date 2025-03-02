@@ -1,3 +1,13 @@
+    // Wait for the complete page to load
+    window.addEventListener("load", function() {
+        // Ensure loader is visible for at least 3 seconds
+        setTimeout(function() {
+            // Hide the loader
+            document.getElementById("loader").style.display = "none";
+            // Display the main content
+            document.getElementById("content").style.display = "block";
+        }, 3000);
+    });
 
 // fungsi-fungsi music player
 let progress = document.getElementById('progress');

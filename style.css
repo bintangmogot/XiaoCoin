@@ -3,7 +3,6 @@
         overflow-x: hidden;
       }
 
-    
     /* Desktop: show entire video without cropping */
        .video-container video {
            width: 100vw;
