@@ -180,9 +180,9 @@
      Custom Styles
      ============================================== */
   #title {
-    font-size: calc(1.5rem + 3vw); /* Base size for mobile */
+    font-size: calc(3rem + 3vw); /* Base size for mobile */
     @media screen and (min-width: 768px) {
-      font-size: calc(3rem + 3.5vw); /* Size for tablet */
+      font-size: calc(4rem + 3.5vw); /* Size for tablet */
     }
     @media screen and (min-width: 1024px) {
       font-size: calc(4rem + 4vw); /* Size for desktop */

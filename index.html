@@ -16,55 +16,9 @@
 <body>
 
   <!-- Container video dengan kelas Bootstrap -->
-<div class="video-container position-relative w-100 min-vh-100 overflow-hidden">
-  <video
-    class="w-100 h-100 object-fit-cover"
-    src="files/panda.mp4"
-    autoplay
-    loop
-    muted
-  > </video>
-  <h2 id="title">$PAO</h2>  
-  <!-- Hotspot 1 -->
-  <div
-    class="hotspot position-absolute border border-white d-flex align-items-center justify-content-center"
-    style="top: 20%; left: 30%; width: 100px; height: 50px;"
-    data-description="Ini adalah hotspot 1 pada video."
-    data-button="Aksi 1">
-  >
-    <span class="hotspot-label">STORY</span>
-  </div>
-  
-
-  <!-- Hotspot 2 -->
-  <div
-    class="hotspot position-absolute border border-white d-flex align-items-center justify-content-center"
-    style="top: 50%; left: 60%; width: 100px; height: 50px; cursor: pointer;"
-    data-description="Ini adalah hotspot 2 pada video."
-    data-button="Aksi 2"
-  >
-    <span class="hotspot-label" >INFO</span>
-  </div>
-
-  <!-- Hotspot 3 -->
-  <div
-    class="hotspot position-absolute border border-white d-flex align-items-center justify-content-center"
-    style="top: 70%; left: 10%; width: 100px; height: 50px; cursor: pointer;"
-    data-description="Ini adalah hotspot 3 pada video."
-    data-button="Aksi 3"
-  >
-    <span class="hotspot-label">MORE</span>
-  </div>
-
-  <!-- Popup (disembunyikan dengan .d-none, ditampilkan lewat JS) -->
-  <div
-    id="popup"
-    class="popup position-absolute bg-white p-2 border shadow d-none"
-  >
-    <div class="popup-content"></div>
-    <!-- Contoh: pakai kelas Bootstrap untuk tombol -->
-    <button id="popupButton" class="btn btn-primary btn-sm mt-2">Aksi Popup</button>
-  </div>
+<div class="video-container position-relative" style="width:100vw; height:100vh; overflow:hidden;">
+  <video src="files/panda.mp4" autoplay loop muted></video>
+  <h2 id="title">$PAO</h2>    
 </div>
 
 <!-- SECTION BARU di bawah .video-container -->
