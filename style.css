@@ -39,6 +39,14 @@
          bottom: 0;
          right: 0;
      }
+       /* Mobile and tablet: video fills screen */
+       @media (max-width: 1024px) {
+        .container-music {
+            width: 250px;
+            height: 100px;
+
+        }
+      }
      
      .music-player {
          border-radius: 8px;
@@ -54,6 +62,15 @@
          box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
      }
      
+     /* Mobile and tablet: video fills screen */
+       @media (max-width: 1024px) {
+        .music-player {
+            width: 250px;
+            height: 100px;
+            padding: 12px 28px;
+
+        }
+      }
      @keyframes rotate {
          from { transform: translateY(-100%), rotate(0deg); }
          to { transform: translateY(-100%), rotate(360deg); }
@@ -70,7 +87,13 @@
          border: 2px solid #ddd;
          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
      }
-     
+          /* Mobile and tablet: video fills screen */
+          @media (max-width: 1024px) {
+            .music-player .song-img {
+                width: 64px;
+                height: 64px;
+            }
+          }
      .music-player h6 {
          font-size: 20px;
          font-weight: extra-bold;
@@ -80,6 +103,15 @@
          text-align: left;
      }
      
+          /* Mobile and tablet: video fills screen */
+          @media (max-width: 1024px) {
+            .music-player h6 {
+                font-size: 14px;
+                margin-left: 4px;
+                margin-bottom: -6px;
+
+            }
+          }
      #progress {
          -webkit-appearance: none;
          appearance: none;
@@ -90,6 +122,16 @@
          cursor:pointer;
          margin: 8px 8px 16px 0;
      }
+
+        /* Mobile and tablet: video fills screen */
+        @media (max-width: 1024px) {
+            #progress {
+                width: 80%;
+                height: 4px;
+                margin: 2px 2px 8px 0;
+
+            }
+        }
      
      #progress::-webkit-slider-thumb {
          -webkit-appearance: none;
@@ -100,7 +142,15 @@
          border: 7px solid #f5e5e5;
          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
      
-     }
+     }  
+     /* Mobile and tablet: video fills screen */
+          @media (max-width: 1024px) {
+            #progress::-webkit-slider-thumb {
+                width: 20px;
+                height: 20px;
+            }
+          }
+
      
      #progress::-webkit-slider-thumb:hover {
          background: #D38F8B;
@@ -128,6 +178,13 @@
          color: #4D4C5F;
          cursor: pointer;
      }
+          /* Mobile and tablet: video fills screen */
+          @media (max-width: 1024px) {
+            .controls div{
+                width: 28px;
+                height: 28px;
+            }
+          }
      
      
      .controls div:hover {
