@@ -1,0 +1,225 @@
+/* ==============================================
+   Global Styles
+   ============================================== */
+
+   :root {
+    /* ======================
+       Color Palette System
+       ====================== */
+    --preset--color--primary: #F7E0D3;
+    --preset--color--secondary: #F8768A;
+    --preset--color--accent: #428C90;
+    --preset--color--success: #428C90;
+    --preset--color--warning: #FFF2C3;
+    --preset--color--danger: #D4908D;
+    --preset--color--gray-100: #f6f4f3;
+    --preset--color--gray-500: #80716b;
+    --preset--color--gray-900: #2e1212;
+    --preset--color--white: #f9f9f9;
+    --preset--color--black: #222222;
+  
+    /* ======================
+       Typography System
+       ====================== */
+    --preset--font-family--heading-1: "Baumans", system-ui;
+    --preset--font-family--heading-2: "Oxanium", sans-serif;
+    --preset--font-family--heading-3: "Oxanium", sans-serif;
+    --preset--font-family--heading-4: "Oxanium", sans-serif;
+    --preset--font-family--heading-5: "Oxanium", sans-serif;
+    --preset--font-family--base: system-ui, -apple-system, BlinkMacSystemFont, 
+                                   'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+                                   sans-serif;
+    --preset--font-family--paragraph: "Abeezee", sans-serif;
+    --preset--font-family--button: "Sudo Var", sans-serif;
+  
+    /* ======================
+       Text Colors
+       ====================== */
+    --preset--color--text-primary: var(--wp--preset--color--gray-900);
+    --preset--color--text-secondary: var(--wp--preset--color--gray-500);
+    --preset--color--text-inverted: var(--wp--preset--color--white);
+  }
+  
+  /* ==============================================
+     Global Styles
+     ============================================== */
+  
+  /* Base Styles */
+  body {
+    font-family: var(--preset--font-family--base);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--preset--color--text-primary);
+  }
+
+  p {
+    font-family: var(--preset--font-family--paragraph);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1em 0;
+    letter-spacing: 6%;
+  }
+  
+  /* Heading System */
+  h1 {
+    font-family: var(--preset--font-family--heading-1);
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 2em 0 1em;
+  }
+  
+  h2 {
+    font-family: var(--preset--font-family--heading-2);
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 1.75em 0 0.875em;
+  }
+  
+  h3 {
+    font-family: var(--preset--font-family--heading-3);
+    font-size: 2.4rem;
+    line-height: 1.3;
+    font-weight: 500;
+    margin: 1.5em 0 0.75em;
+  }
+  
+  h4 {
+    font-family: var(--preset--font-family--heading-4);
+    font-size: 2.1rem;
+    line-height: 1.35;
+    font-weight: 400;
+    margin: 1.25em 0 0.625em;
+  }
+  
+  h5 {
+    font-family: var(--preset--font-family--heading-5);
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 300;
+    margin: 1em 0 0.5em;
+  }
+
+  button {
+    font-family: var(--preset--font-family--button);
+    font-weight: 500;
+    background-color:var(--preset--color--accent); /* Teal-like background */
+    color: #f9f9f9;              /* White text */
+    border: none;
+    padding: 0.4em 1em;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+  
+
+  /* ==============================================
+     Button Styles
+     ============================================== */
+ 
+    .btn-primary:hover {
+      background-color: #3D8A8A; /* Darker teal on hover */
+      transition-duration: 100ms; /* Faster transition */
+      transform: scale(1.05) translateY(-8px); /* Slightly larger and moves up on hover */
+      transition: transform 200ms ease-in-out; /* Duration time on hover and after hover */
+
+    }
+    
+    .btn-secondary {
+      background-color: #f9f9f9;   /* White background */
+      color: var(--preset--color--accent);
+      border: 4px solid var(--preset--color--accent); /* inside border */
+      box-sizing: border-box; /* Ensure the border is inside the button */
+    }
+    
+    .btn-secondary:hover {
+      background-color: var(--preset--color--accent);
+      color: #fff; /* Text becomes white on hover */
+      transform: scale(1.05) translateY(-8px); /* Slightly larger and moves up on hover */
+      transition: transform 200ms ease-in-out; /* Duration time on hover and after hover */
+    }
+
+    /* Tablet Styles (min-width: 768px) */
+    @media (min-width: 768px) {
+      body {
+        font-size: 1.125rem;  /* 18px */
+      }
+      p {
+        font-size: 1.15rem;
+      }
+    
+      h1 { font-size: 5rem; }   /* 80px */
+      h2 { font-size: 4rem; }     /* 64px */
+      h3 { font-size: 3.5rem; }  /* 72px */
+      h4 { font-size: 3rem; }   /* 48px */
+      h5 { font-size: 2.5rem; }  /* 40px */
+      button {font-size: 2rem;}
+    }
+    
+    /* Desktop Styles (min-width: 1024px) */
+    @media (min-width: 1024px) {
+      body {
+        font-size: 1.25rem;  /* 20px */
+      }
+      p {
+        font-size: 1.3rem;
+      }
+    
+      h1 { font-size: 6rem; }   /* 96px */
+      h2 { font-size: 5rem; }   /* 80px */
+      h3 { font-size: 4rem; }   /* 64px */
+      h4 { font-size: 3rem; }   /* 48px */
+      h5 { font-size: 2.5rem; } /* 40px */
+      button {font-size: 2rem;}
+
+    }
+  
+  /* ==============================================
+     Custom Styles
+     ============================================== */
+  #title {
+    font-size: calc(1.5rem + 3vw); /* Base size for mobile */
+    @media screen and (min-width: 768px) {
+      font-size: calc(3rem + 3.5vw); /* Size for tablet */
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: calc(4rem + 4vw); /* Size for desktop */
+    }
+    font-weight:500;
+    font-family: var(--preset--font-family--heading-1);
+    background-color: #FEF8EA;
+    padding: 0.1em 0.5em;
+    border-radius: 8px;
+    border-color: var(--preset--color--black);
+    border-width: 4px;
+    border-style: solid;
+    color: var(--preset--color--black);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 10; /* Ensure this is higher than other elements */
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* ==============================================
+   Utility Classes
+   ============================================== */
+
+.text-primary { color: var(--preset--color--text-primary) !important; }
+.text-secondary { color: var(--preset--color--text-secondary) !important; }
+.text-inverted { color: var(--preset--color--text-inverted) !important; }
+
+.bg-primary { background-color: var(--preset--color--primary) !important; }
+.bg-secondary { background-color: var(--preset--color--secondary) !important; }
+.bg-accent { background-color: var(--preset--color--accent) !important; }
+.bg-success { background-color: var(--preset--color--success) !important; }
+.bg-warning { background-color: var(--preset--color--warning) !important; }
+.bg-danger { background-color: var(--preset--color--danger) !important; }
+
+  /* Optional: Add spacing system if needed */
+  

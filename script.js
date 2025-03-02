@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function showPopup(hotspot) {
     const description = hotspot.getAttribute('data-description');
     const buttonText = hotspot.getAttribute('data-button');
-
+    
     popupContent.textContent = description;
     popupButton.textContent = buttonText;
 
@@ -72,12 +72,28 @@ song.onloadedmetadata = function () {
     progress.max = song.duration;
     progress.value = song.currentTime;
 }
+// // Play the song after the page loads
+window.addEventListener('load', () => {
+    song.play().then(() => {
+        ctrlIcon.classList.add('fa-pause');
+        ctrlIcon.classList.remove('fa-play');
+    }).catch((error) => {
+        console.error('Autoplay failed:', error);
+    });
+});
+
+// Play the song after the page loads
+    // window.addEventListener('load', () => {
+    //     song.play();
+    //     ctrlIcon.classList.add('fa-pause');
+    //     ctrlIcon.classList.remove('fa-play');
+    // });
 
 function loadSong() {
     let currentSong = playlist[currentSongIndex];
     song.src = currentSong.source;
     songImg.src = currentSong.image;
-    document.querySelector('h1').textContent = currentSong.title;
+    document.querySelector('h6').textContent = currentSong.title;
 }
 
 function playPause() {
