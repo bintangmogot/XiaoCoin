@@ -12,6 +12,7 @@
   <link href="https://fonts.cdnfonts.com/css/sudo-var" rel="stylesheet">
   <link rel="stylesheet" href="css/global-styles.css">
   <link rel="stylesheet" href="css/loading.css">
+  <link rel="stylesheet" href="css/navbar.css">
   <script src="https://kit.fontawesome.com/22596b4c53.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -23,15 +24,26 @@
 </div>
 
   <div id="content">
-
+<!-- navbar -->
+    <nav class="nav-container">
+      <div class="nav-menu">
+          <a href="#bambooville" class="nav-link btn-secondary">Bambooville</a>
+          <a href="#how" class="nav-link btn-secondary">How to Buy</a>
+          <a href="#token" class="nav-link btn-secondary">Tokenomics</a>
+          <a href="#oke" class="nav-link btn-secondary">Community</a>
+      </div>
+      <div class="scroll-track">
+          <div class="scroll-indicator"></div>
+      </div>
+  </nav>
   <!-- Container video dengan kelas Bootstrap -->
-<div class="video-container position-relative" style="width:100vw; height:100vh; overflow:hidden;">
+<div id="bambooville" class="video-container position-relative" style="width:100vw; height:100vh; overflow:hidden;">
   <video src="files/panda.mp4" autoplay loop muted></video>
   <h2 id="title">$PAO</h2>    
 </div>
 
 <!-- SECTION BARU di bawah .video-container -->
-<section class="content-section py-5 bg-light">
+<section id="how" class="content-section py-5 bg-light">
   <div class="container">
     <h2>Bagian Baru</h2>
     <p>
@@ -41,11 +53,10 @@
   </div>
 </section>
 
-  <div class="card mt-4">
+  <div id="oke" class="card mt-4">
     <h2 class="text-secondary">Card Title</h2>
     <p>Regular content</p>
   </div>
-</main>
 
 <!-- section music player -->
 <div class="container-music">

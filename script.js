@@ -9,6 +9,43 @@
         }, 3000);
     });
 
+        // Scroll indicator animation
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        const scrollTrack = document.querySelector('.scroll-track');
+        
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / windowHeight);
+            
+            // Calculate indicator height relative to track
+            const trackHeight = scrollTrack.offsetHeight;
+            scrollIndicator.style.height = `${scrolled * trackHeight}px`;
+        });
+
+        // Smooth scroll and active state
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = link.getAttribute('href');
+                document.querySelector(href).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Update opacity based on scroll
+        window.addEventListener('scroll', () => {
+            if(window.innerWidth > 768) {
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    const section = document.querySelector(link.getAttribute('href'));
+                    if(!section) return;
+                    
+                    const rect = section.getBoundingClientRect();
+                    link.style.opacity = rect.top <= window.innerHeight/2 && rect.bottom >= window.innerHeight/2 ? '1' : '0.5';
+                });
+            }
+        });
+
 // fungsi-fungsi music player
 let progress = document.getElementById('progress');
 let song = document.getElementById('song');
