@@ -203,7 +203,7 @@
   @media screen and (max-width: 768px) {
     #title {
       font-size: calc(3rem + 3vw); /* Base size for mobile */
-      margin-top: 10%;
+      margin-top: 100px;
     }
   }
   

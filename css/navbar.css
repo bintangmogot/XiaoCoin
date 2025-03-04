@@ -97,8 +97,10 @@
     .nav-menu {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 4px;
-    }
+        justify-content: center;    
+}
 
     .nav-link {
         font-size: 0.9rem;
