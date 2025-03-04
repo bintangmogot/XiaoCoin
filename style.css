@@ -38,6 +38,7 @@
          position: fixed;
          bottom: 0;
          right: 0;
+         z-index: 1000;
      }
        /* Mobile and tablet: video fills screen */
        @media (max-width: 1024px) {
@@ -204,3 +205,40 @@
          box-shadow: none;
          
      }
+
+
+
+     /* ====================
+     Vertical Button
+     ====================== */
+     .vertical-btn {
+        /* Atur tinggi tombol sesuai kebutuhan */
+        height: 140px;
+        width: 80px;
+        
+        /* Membuat teks ditampilkan vertikal */
+        writing-mode: vertical-rl;       /* atau 'vertical-lr' */
+        text-orientation: upright;       /* menjaga tiap huruf tetap tegak */
+        
+        /* Untuk memastikan konten berada di tengah */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        /* Tambahan opsional */
+        border-radius: 8px;             /* misalnya jika ingin sudut melengkung */
+        font-weight: bold;              /* styling teks */
+        font-size: 1.2rem;              /* ukuran font */
+
+            /* position */
+            position: absolute; 
+            top:30%; 
+            right: 18%;
+
+            /* Mobile and tablet: adjust position */
+            @media (max-width: 1024px) {
+                display: none;
+
+            }
+
+        }

@@ -35,15 +35,64 @@
       <div class="scroll-track">
           <div class="scroll-indicator"></div>
       </div>
-  </nav>
+    </nav>
+
   <!-- Container video dengan kelas Bootstrap -->
-<div id="bambooville" class="video-container position-relative" style="width:100vw; height:100vh; overflow:hidden;">
-  <video src="files/panda.mp4" autoplay loop muted></video>
-  <h2 id="title">$PAO</h2>    
-</div>
+  <div id="bambooville" class="video-container position-relative" style="width:100vw; height:100vh; overflow:hidden;">
+    <video src="files/panda.mp4" autoplay loop muted ></video>
+    <div class="d-flex flex-column container-title">
+      <h2 id="title">$PAO</h2> 
+      <h5 id="subheading-h5">Are You Ready to Take Over?</h5>
+    </div>
+    <!-- Button Call to Action -->
+    <div class="container mt-3" style="position: absolute; top: 70%; left: 8%;">
+      <div class="d-inline-flex flex-column mb-3 align-items-stretch align-content-stretch">
+        <div>
+          <a href="#">
+          <button class="btn-secondary w-100">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-up-right-square-fill" viewBox="0 0 16 16">
+              <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707"/>
+            </svg>
+            Buy Now
+          </button></a>
+        </div>
+        <div class="d-flex mb-3 mt-3 gap-2">
+               <div>
+                  <button class="btn-primary px-3 py-2 rounded-2 bg-secondary">
+                  <a href="https://dexscreener.com/solana/3zm5bnjvk5xpj2ckdqajq1hbqslwz6f3jzsmn5yzek1c">
+                    <img src="files/icon/dex-screener.svg" alt="Dexscreener" style="width: 40px; height: 40px;">
+                  </a>
+                  </button>
+               </div>
+            <div>
+              <button class="btn-primary px-3 py-2 bg-secondary">
+              <a href="https://www.dextools.io/">
+                <img src="files/icon/dex-screener.svg" alt="dextools" style="width: 40px; height: 40px;">
+              </a>
+              </button>
+            </div>
+                <div>
+                  <a href="https://solscan.io/">
+                  <button class="btn-primary px-3 py-2 bg-secondary">
+                    <img src="files/icon/dex-screener.svg" alt="solscan" style="width: 40px; height: 40px;">
+                  </button>
+                </a>
+                </div>
+        </div>  
+      
+      </div>
+      </div>
+      <a href="#menu">
+      <button class="btn-secondary vertical-btn btn-menu">
+        ABOUT
+      </button>
+    </a>
+  </div>
 
 <!-- SECTION BARU di bawah .video-container -->
 <section id="how" class="content-section py-5 bg-light">
+
   <div class="container">
     <h2>Bagian Baru</h2>
     <p>
@@ -51,6 +100,7 @@
       memasukkan teks, gambar, atau konten lain sesuai kebutuhan.
     </p>
   </div>
+
 </section>
 
   <div id="oke" class="card mt-4">
@@ -81,6 +131,8 @@
       <img src="/Images/XIAO PFP 1.png" class="main-img">
   </div>
 </div>
+</div>
+
 
   <script src="script.js"></script>
 </body>
