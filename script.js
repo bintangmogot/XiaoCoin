@@ -6,7 +6,7 @@
             document.getElementById("loader").style.display = "none";
             // Display the main content
             document.getElementById("content").style.display = "block";
-        }, 3000);
+        }, 2000);
     });
 
         // Scroll indicator animation
@@ -154,3 +154,58 @@ rotateImage();
 song.onended = function () {
     playNext();
 }
+
+// <!-- 
+// CAROUSEL SLIDER
+// -->
+  // Duplicate slides until the wrapper fills at least double the container width.
+  function duplicateSlidesUntilFull(container) {
+    const wrapper = container.querySelector('.swiper-wrapper');
+    const containerWidth = container.offsetWidth;
+    
+    // Remove previously added clones (non-original slides)
+    Array.from(wrapper.children).forEach(child => {
+      if (!child.hasAttribute('data-original')) {
+        wrapper.removeChild(child);
+      }
+    });
+    
+    // Get the original slides
+    const originalSlides = Array.from(wrapper.querySelectorAll('.swiper-slide[data-original]'));
+    
+    // Duplicate originals until the total width is at least double the container width.
+    while (wrapper.scrollWidth < containerWidth * 2) {
+      originalSlides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        // Clones are not marked as original.
+        wrapper.appendChild(clone);
+      });
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get all swiper containers.
+    const containers = document.querySelectorAll('.swiper-container');
+    
+    containers.forEach(container => {
+      duplicateSlidesUntilFull(container);
+      
+      // Initialize a new Swiper instance for each container.
+      new Swiper(container, {
+        loop: true,
+        speed: 2000, // Transition animation speed in ms.
+        spaceBetween: 0,
+        slidesPerView: 'auto',
+        autoplay: {
+          delay: 0,
+        },
+      });
+    });
+    
+    // Update slide duplication on scroll.
+    window.addEventListener('scroll', () => {
+      containers.forEach(container => {
+        duplicateSlidesUntilFull(container);
+      });
+    });
+  });

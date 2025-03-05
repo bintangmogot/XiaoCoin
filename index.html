@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="css/global-styles.css">
   <link rel="stylesheet" href="css/loading.css">
   <link rel="stylesheet" href="css/navbar.css">
-  <script src="https://kit.fontawesome.com/22596b4c53.js" crossorigin="anonymous"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 </head>
 <body>
 <!-- Loading Screen -->
@@ -83,13 +85,69 @@
       
       </div>
       </div>
-      <a href="#menu">
+      <a href="#about">
       <button class="btn-secondary vertical-btn btn-menu">
         ABOUT
       </button>
     </a>
   </div>
 
+  <!-- ===================
+          SECTION ABOUT
+   ======================-->
+
+    <!-- First Swiper Container: Normal Direction (default leftward) -->
+  <div class="swiper-container normal">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-original="true"><img src="Images/aimoraimo-yorushika.jpg" alt="Image 1"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/hana ni bourei-yorushika.jpg" alt="Image 2"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/seesaw-tuki.webp" alt="Image 3"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/aimoraimo-yorushika.jpg" alt="Image 1"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/aimoraimo-yorushika.jpg" alt="Image 1"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/hana ni bourei-yorushika.jpg" alt="Image 2"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/aimoraimo-yorushika.jpg" alt="Image 1"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/hana ni bourei-yorushika.jpg" alt="Image 2"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/aimoraimo-yorushika.jpg" alt="Image 1"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/hana ni bourei-yorushika.jpg" alt="Image 2"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/aimoraimo-yorushika.jpg" alt="Image 1"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/hana ni bourei-yorushika.jpg" alt="Image 2"></div>
+    </div>
+
+    <!-- container inside normal-->
+    <div id="about" class="d-flex bg-sharp-gradient p-div">
+      <div class="d-flex flex-row flex-column flex-md-row w-100 gap-2">
+        <!-- First Column: Image -->
+        <div class="p-2 col-12 col-md-6 align-self-center" style="margin-top: -5%;">
+        <video
+          src="files/XIAO/XIAO.mp4"
+          alt="XIAO Machine"
+          class="img-fluid w-100"
+          autoplay loop muted 
+        ></video>
+        </div>
+      
+        <!-- Second Column: Nested rows for heading & paragraph -->
+        <div class="p-2 col-12 col-md-6">
+        <div class="d-flex flex-column">
+            <h2 style="color: var(--preset--color--warning);" class="heading-responsive">A super duper Panda</h2>
+            <p style="color: var(--preset--color--warning);" class="text-responsive">
+            driven cryptocurrency inspired by the charmand resilience of the giant panda. Just like pandas thrive in harmony with nature,
+            PAO aims to create a balanced ecosystem for crypto enthusiasts, combining playful innovation with real-world impact.
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+  <!-- Second Swiper Container: Reverse Direction (rightward) -->
+  <div class="swiper-container reverse">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-original="true"><img src="Images/hana ni bourei-yorushika.jpg" alt="Image 1"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/haru-yorushika.png" alt="Image 2"></div>
+      <div class="swiper-slide" data-original="true"><img src="Images/aimoraimo-yorushika.jpg" alt="Image 3"></div>
+    </div>
+  </div>
 <!-- SECTION BARU di bawah .video-container -->
 <section id="how" class="content-section py-5 bg-light">
 
@@ -132,6 +190,11 @@
   </div>
 </div>
 </div>
+
+<script src="https://kit.fontawesome.com/22596b4c53.js" crossorigin="anonymous"></script>
+
+   <!-- Swiper JS -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
   <script src="script.js"></script>

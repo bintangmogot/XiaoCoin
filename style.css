@@ -242,3 +242,49 @@
             }
 
         }
+
+
+    /*======================= 
+UNLIMITED CAROUSEL SLIDING
+========================*/
+    /* Common styles */
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+        width: auto !important;
+        display: inline-flex !important;
+        background-color: var(--preset--color--warning);
+        border:12px solid var(--preset--color--accent);
+       }
+       .swiper-slide {
+        width: 150px !important;    
+        height: 100%;
+        flex-shrink: 0 !important;
+        padding: 10px;
+        border-radius: 8px;
+       }
+       .swiper-slide img {
+        height: 100px;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid #fff;
+       }
+       /* Normal container: no transform (slides move left as default) */
+       .swiper-container.normal {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+         /* No transform applied */
+       }
+       /* Reverse container: flip to achieve rightward motion */
+       .swiper-container.reverse {
+         width: 100%;
+         height: auto;
+         overflow: hidden;
+         transform: scaleX(-1);
+       }
+       /* For reverse container, flip each slide back to normal */
+       .swiper-container.reverse .swiper-slide {
+         transform: scaleX(-1);
+       }

@@ -68,6 +68,14 @@
 
 }
 
+/* TABLET */
+@media (max-width: 1024px) {
+    .nav-link {
+        opacity: 0.2;
+    }
+
+}
+/* MOBILE */
 @media (max-width: 768px) {
 
     .scroll-track {
