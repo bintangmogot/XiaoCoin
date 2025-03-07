@@ -254,6 +254,7 @@ UNLIMITED CAROUSEL SLIDING
         display: inline-flex !important;
         background-color: var(--preset--color--warning);
         border:12px solid var(--preset--color--accent);
+        margin: 0px;
        }
        .swiper-slide {
         width: 150px !important;    
@@ -269,6 +270,7 @@ UNLIMITED CAROUSEL SLIDING
         object-fit: cover;
         border-radius: 8px;
         border: 2px solid #fff;
+        
        }
        /* Normal container: no transform (slides move left as default) */
        .swiper-container.normal {
@@ -288,3 +290,19 @@ UNLIMITED CAROUSEL SLIDING
        .swiper-container.reverse .swiper-slide {
          transform: scaleX(-1);
        }
+
+
+
+
+
+/* Inline Heading */
+.Inline-heading {
+        display: inline;
+        margin: 0; /* Remove default margin */
+}
+
+.step-number {
+    font-size: 2em; /* Adjust size as needed */
+    font-weight: bold;
+    margin-right: 0.5em; /* Adds some spacing between the number and text */
+  }

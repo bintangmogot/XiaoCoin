@@ -18,6 +18,8 @@
 
 </head>
 <body>
+  <div id="content">
+
 <!-- Loading Screen -->
 <div id="loader" class="center">
   <div class="ring"></div>
@@ -25,7 +27,6 @@
   <img src="files/XIAO PFP 1.png" alt="tryxdd" class="logo">
 </div>
 
-  <div id="content">
 <!-- navbar -->
     <nav class="nav-container">
       <div class="nav-menu">
@@ -39,6 +40,9 @@
       </div>
     </nav>
 
+<!--====================== 
+        SECTION MAIN
+==========================-->
   <!-- Container video dengan kelas Bootstrap -->
   <div id="bambooville" class="video-container position-relative" style="width:100vw; height:100vh; overflow:hidden;">
     <video src="files/panda.mp4" autoplay loop muted ></video>
@@ -141,30 +145,133 @@
    </div>
 
   <!-- Second Swiper Container: Reverse Direction (rightward) -->
-  <div class="swiper-container reverse">
+  <div class="swiper-container reverse bg-gradient-s">
     <div class="swiper-wrapper">
       <div class="swiper-slide" data-original="true"><img src="Images/hana ni bourei-yorushika.jpg" alt="Image 1"></div>
       <div class="swiper-slide" data-original="true"><img src="Images/haru-yorushika.png" alt="Image 2"></div>
       <div class="swiper-slide" data-original="true"><img src="Images/aimoraimo-yorushika.jpg" alt="Image 3"></div>
     </div>
   </div>
-<!-- SECTION BARU di bawah .video-container -->
-<section id="how" class="content-section py-5 bg-light">
 
-  <div class="container">
-    <h2>Bagian Baru</h2>
-    <p>
-      Ini adalah contoh section baru di bawah video-container. Anda bisa
-      memasukkan teks, gambar, atau konten lain sesuai kebutuhan.
-    </p>
-  </div>
+  <!-- ===============
+      SECTION HOW TO BUY
+   =================== -->
+   <section id="how" class="p-0 m-0">
+        <!-- container-->
+        <div class="d-flex bg-gradient p-div m-0">
+            <div class="d-flex flex-row flex-column flex-md-column-reverse flex-xl-row w-100 gap-2 ">
+            <!-- First Column: penjelasan -->
+             <div class="p-2 col-12 col-xl-8">
+              <div class="d-flex flex-column">
+                  <h2>How to Buy</h2>
+              <div class="d-flex flex-column">
+                <div class="d-flex flex-sm-row flex-wrap">
+                  <!-- column 1 -->
+                  <div class="col-sm-6"> 
+                      <table style="border-collapse: collapse; border: none;">
+                        <tr>
+                          <td rowspan="2" style="border: none; padding-right: 12px;">
+                            <h1 class="m-0">1. </h1>
+                          </td>
+                          <td style="border: none;">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td style="border: none;">
+                            <h5  class=" m-0"> Download a Solana Wallet</h5>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="border: none;"></td>
+                          <td style="border: none; ">                   
+                             <p class="m-0"> You can use Sollet.io, Phantom, or any other Solana wallet. </p>
+                          </td>
 
-</section>
+                        </tr>
+                      </table>
 
-  <div id="oke" class="card mt-4">
-    <h2 class="text-secondary">Card Title</h2>
-    <p>Regular content</p>
-  </div>
+                
+                  </div>
+
+                      <!-- column 2 -->
+                  <div class="col-sm-6"> 
+                    <table style="border-collapse: collapse; border: none;">
+                      <tr>
+                        <td rowspan="2" style="border: none; padding-right: 12px;">
+                          <h1 class="m-0">3. </h1>
+                        </td>
+                        <td style="border: none;">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td style="border: none;">
+                          <h5  class=" m-0"> Swap, Confirm, Check balance </h5>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="border: none;"></td>
+                        <td style="border: none; ">                   
+                          <ul style="padding-left: 16px">
+                            <li>Select SOL and $PAO, swap</li>
+                            <li>Approve in Phantom Wallet</li>
+                            <li>Verify $PAO</li>
+                        </ul>
+                        </td>
+
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <!--  List second line -->
+                <div class="d-flex flex-row gap-2 w">
+                  <!-- first column -->
+                  <div class="d-flex flex-column col-md-6">
+                    <table style="border-collapse: collapse; border: none;">
+                      <tr>
+                        <td rowspan="2" style="border: none; padding-right: 12px;">
+                          <h1 class="m-0">2. </h1>
+                        </td>
+                        <td style="border: none;">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td style="border: none;">
+                          <h5  class=" m-0"> Add SOL & Connect to DEX </h5>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="border: none;"></td>
+                        <td style="border: none; ">                   
+                           <p class="m-0"> Deposit SOL then use Raydium or Serum, connect Phantom WalLet. </p>
+                        </td>
+  
+                      </tr>
+                    </table>
+                  </div>
+                  <!-- second column -->
+                  <div class="d-flex flex-column col-md-6">
+                 
+                  </div>
+                  
+                 </div>
+
+                 <div class="d-flex flex-row flex-wrap gap-2 py-3 align-content-stretch">
+                  <div class="col-12 col-md-8 rounded-pill text-center" style="border: 1px solid #2e1212; background-color: rgba(240,248,255, 0.4);">
+                    <p>9jZgvgS2bWtQiYzv48GcWzY4tnkeRSANbTm8Kp1LmSyS</p>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <button class= "btn-primary w-100" id="copy-btn">Copy</button>
+                  </div>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+          
+            <!-- Second Column: image of panda -->
+            <div class="p-2 col-12 col-xl-4 p-0 m-min custom-width">
+          <img src="files/cutePanda.png" alt="XIAO Cute" class="img-fluid w-100" style="margin: 0 -5% 0 0;">
+              </div>
+          </div>
+        </div>
+   </section>
 
 <!-- section music player -->
 <div class="container-music">
@@ -178,7 +285,6 @@
           <source src="/Audio/tuki.『シーソー』Official Music Video.mp3" type="audio/mpeg">
       </audio>
       <input type="range" value="0" id="progress">
-
 
       <div class="controls">
           <div onclick="playPrev()"><i class="fa-solid fa-backward"></i></div>
@@ -196,6 +302,7 @@
    <!-- Swiper JS -->
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script src="script.js"></script>
 </body>

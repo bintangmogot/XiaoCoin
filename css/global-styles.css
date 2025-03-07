@@ -18,7 +18,9 @@
     --preset--color--white: #f9f9f9;
     --preset--color--black: #222222;
     --preset--color--gradient: linear-gradient(to bottom right, #D0D1FF, #809FEB);
+    --preset--color--gradient-s: linear-gradient(to bottom right, #F8E1D4, #ceb3a3);
     --preset--color--sharp-gradient: linear-gradient(to bottom, #809FEB 90%, #E3EDFF 90%);
+    
 
   
     /* ======================
@@ -62,6 +64,9 @@ Padding & Margin System
 .m-4 { margin: 8%; }
 .m-5 { margin: 10%; }
 .m-div { margin: 5%; }
+.m-s-0 { margin: 0; }
+.m-min { margin: 0; }
+
 
 /* Tablet (min-width: 768px) */
 @media (min-width: 768px) {
@@ -80,7 +85,8 @@ Padding & Margin System
   .m-4 { margin: 6%; }
   .m-5 { margin: 7.5%; }
   .m-div { margin:5% 6%; }
-
+  .m-min { margin: 0; }
+  
 }
 
 /* Desktop (min-width: 1024px) */
@@ -100,6 +106,8 @@ Padding & Margin System
   .m-4 { margin: 4%; }
   .m-5 { margin: 5%; }
   .m-div { margin: 5% 8%; }
+  .m-min { margin: -5% 0 0 0; }
+
 
 }
   /* ==============================================
@@ -286,6 +294,22 @@ Padding & Margin System
     transform: translateX(-50%);
   }
 
+  .custom-width {
+    width: 500px;
+  }
+  @media screen and (max-width: 1024px) {
+    .custom-width {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .custom-width {
+      width: 100%;
+    }
+  }
+
+  /* MOBILE */
   @media screen and (max-width: 768px) {
     #title {
       font-size: calc(3rem + 3vw); /* Base size for mobile */
@@ -301,9 +325,10 @@ Padding & Margin System
       font-size: 1.2rem;
       margin: 0;
     }
+
   }
 
-  
+  /* TABLET */
   @media screen and (max-width: 1024px) {
     #title {
       font-size: calc(4rem + 3.5vw); /* Size for tablet */
@@ -347,4 +372,16 @@ Padding & Margin System
     /* .heading-responsive {
       color: var(--preset--color--text-primary) !important;
     } */
+  }
+
+  #how .bg-gradient {
+    background: linear-gradient(to bottom right, #F8E1D4, #ceb3a3) !important;
+  }
+
+  #tokenomics .bg-gradient {
+    background: linear-gradient(to bottom right, #F8E1D4, #3c2211) !important;
+  }
+
+  .bg-gradient-s {
+    background: linear-gradient(to left, #F8E1D4 0%, #ceb3a3 200%) !important;
   }

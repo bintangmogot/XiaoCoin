@@ -6,7 +6,7 @@
             document.getElementById("loader").style.display = "none";
             // Display the main content
             document.getElementById("content").style.display = "block";
-        }, 2000);
+        }, 0);
     });
 
         // Scroll indicator animation
@@ -209,3 +209,29 @@ song.onended = function () {
       });
     });
   });
+
+//   =====COPY ALERT=====
+// Ensure the DOM is fully loaded before attaching event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    const copyButton = document.getElementById('copy-btn');
+  
+    copyButton.addEventListener('click', () => {
+      navigator.clipboard.writeText('9jZgvgS2bWtQiYzv48GcWzY4tnkeRSANbTm8Kp1LmSyS')
+        .then(() => {
+          Swal.fire({
+            icon: 'success',
+            title: 'Copied!',
+            showConfirmButton: false,
+            timer: 1500
+          });
+        })
+        .catch(() => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Copy failed!'
+          });
+        });
+    });
+  });
+  
