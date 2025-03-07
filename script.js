@@ -1,4 +1,49 @@
-    // Wait for the complete page to load
+  //  =====CHART DONUT DYNAMIC=====
+  const ctx = document.getElementById('myDonutChart').getContext('2d');
+  const data = {
+    labels: ['Marketing (70%)', 'Liquidity (10%)', 'LP Burnt (20%)'],
+    datasets: [{
+      data: [70, 10, 20],
+      backgroundColor: [
+        'rgba(255, 179, 186, 0.8)', // pastel pink
+        'rgba(255, 223, 186, 0.8)', // pastel orange
+        'rgba(186, 255, 201, 0.8)'  // pastel green
+      ],
+      borderWidth: 2,
+      borderColor: '#fff',
+      hoverOffset: 10
+    }]
+  };
+
+  const config = {
+    type: 'doughnut',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              let label = context.label || '';
+              let value = context.formattedValue || '';
+              return label + ': ' + value + '%';
+            }
+          }
+        },
+        legend: {
+          display: true,
+          position: 'bottom'
+        }
+      },
+      cutout: '50%' // Membuat donut
+    }
+  };
+
+  new Chart(ctx, config);
+   
+  
+  //  =====LOADING PAGE DYNAMIC=====
+   // Wait for the complete page to load
     window.addEventListener("load", function() {
         // Ensure loader is visible for at least 3 seconds
         setTimeout(function() {

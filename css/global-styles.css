@@ -20,7 +20,7 @@
     --preset--color--gradient: linear-gradient(to bottom right, #D0D1FF, #809FEB);
     --preset--color--gradient-s: linear-gradient(to bottom right, #F8E1D4, #ceb3a3);
     --preset--color--sharp-gradient: linear-gradient(to bottom, #809FEB 90%, #E3EDFF 90%);
-    
+
 
   
     /* ======================
@@ -384,4 +384,8 @@ Padding & Margin System
 
   .bg-gradient-s {
     background: linear-gradient(to left, #F8E1D4 0%, #ceb3a3 200%) !important;
+  }
+
+  .box-shadow {
+    box-shadow: 0 2px 8px 2px rgba(34, 34, 93, 0.1);
   }

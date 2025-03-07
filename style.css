@@ -1,3 +1,200 @@
+    /* =======
+    BACKGROUND TOKENOMICS
+    ========== */
+        /* Half-and-half background using a linear gradient */
+        .tokenomics-section {
+            background: linear-gradient(
+              to right,
+              #f9f9f9 53%,
+              #fff2c3 53%
+            );
+        }
+
+        @media screen and (max-width: 992px) {
+            .tokenomics-section {
+                background: linear-gradient(
+                  to bottom,
+                  #f9f9f9 50%,
+                  #fff2c3 50%
+                );
+            }
+            
+        }
+
+/* =============
+  CHART DESIGN
+================ */
+    /* Ukuran canvas agar responsif */
+    .chart-container {
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+    /* =============
+    HOVER FOCUS (for list data of graph)
+    =============== */     
+  
+      .tokenomics-list {
+        list-style: none;   /* Hilangkan bullet default */
+        margin: 0 auto;
+        max-width: 600px;   /* Batas lebar konten (opsional) */
+        padding: 0;
+      }
+  
+      .tokenomics-item {
+        display: flex;
+        align-items: flex-start; 
+        margin-bottom: 1.5rem;
+        cursor:default;
+        transition: filter 0.3s, background-color 0.3s;
+        border-radius: 8px;
+      }
+  
+      .tokenomics-dot {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        margin-right: 0.75rem;
+        margin-top: 0.2rem;  
+        flex-shrink: 0;     
+      }
+  
+      .tokenomics-content {
+        flex: 1;
+      }
+  
+      .tokenomics-title {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+      }
+  
+      .tokenomics-description {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        opacity: 0.9;
+      }
+  
+      /* --- EFEK HOVER: ITEM YANG TIDAK DI-HOVER MENJADI BLUR --- */
+      /* Ketika mouse berada di dalam .tokenomics-list, semua item di-blur */
+      .tokenomics-item:hover ~ .tokenomics-item,
+      .tokenomics-item:has(~ .tokenomics-item:hover) {
+          filter: blur(3px);
+      }
+      /* Item yang di-hover ditiadakan blur-nya (fokus) */
+      .tokenomics-item:hover {
+        filter: blur(0);
+        background-color: rgba(255, 255, 255, 0.1); /* highlight background (opsional) */
+      }
+  
+      /* ---------- RESPONSIVE LAYOUT ---------- */
+      @media (min-width: 576px) {
+        .tokenomics-list {
+          padding: 0 1rem;
+        }
+      }
+  
+      @media (min-width: 992px) {
+        .tokenomics-list {
+          padding: 0;
+        }
+        .tokenomics-item {
+          margin-bottom: 2rem;
+        }
+        .tokenomics-title {
+          font-size: 1.2rem;
+        }
+        .tokenomics-description {
+          font-size: 1rem;
+        }
+      }
+
+
+/* ===========
+PROGRESS BAR
+==============*/
+ /* Previous styles remain the same */
+ .progress-custom {
+    background: linear-gradient(90deg, #8ec5fc, #e0c3fc);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+  }
+
+  .hover-custom-progress {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover Effects */
+  .hover-custom-progress:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(142, 197, 252, 0.3);
+  }
+  
+  .hover-custom-progress:hover .progress-custom {
+    filter: brightness(1.05);
+  }
+  
+  /* Adjust tooltip hover */
+  .hover-custom-progress::after {
+    content: "Target Achieved - 100%";
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  /* Better text visibility */
+  .text-progress-bar {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: #428C90;
+  }
+  
+  @media (max-width: 768px) {
+    .progress-custom span {
+      font-size: 0.9rem !important;
+    }
+    
+    .progress-custom {
+      padding-left: 10px;
+    }
+  }
+
+  
+/* ==========
+    FLOATING EFFECTS
+=============== */
+.floating {
+    animation: float 3000ms cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translate(-20px, 0);
+    }
+    50% {
+      transform: translate(0, 30px);
+    }
+    100% {
+      transform: translate(-20px, 0);
+    }
+  }
+
+
+    /* =====
+    NAV MENU 
+    ======== */
     /* Hide horizontal scrollbar across the site */
     html, body {
         overflow-x: hidden;
@@ -19,7 +216,9 @@
            }
          }
 
-     /* Section music player */
+     /* ==============
+     Section music player 
+     ==================*/
 
      * {
          margin: 0;
