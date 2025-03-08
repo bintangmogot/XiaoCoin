@@ -626,3 +626,27 @@ UNLIMITED CAROUSEL SLIDING
     font-weight: bold;
     margin-right: 0.5em; /* Adds some spacing between the number and text */
   }
+
+
+  /*============================== 
+  Cartoon-like tilted button style 
+  =================================*/
+  .partner-btn {
+    /* background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    color: #000; */
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    box-shadow: 4px 4px 0 #428C90;      /* "Cartoon" drop shadow */
+    transform: rotate(-1.5deg);      /* Slight tilt */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 0.75rem 1.25rem;
+  }
+  .partner-btn:hover {
+    transform: rotate(0deg);        /* Straighten on hover */
+    box-shadow: 6px 6px 0 #428C90;     /* Increase shadow on hover */
+  }
