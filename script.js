@@ -94,7 +94,7 @@
             document.getElementById("loader").style.display = "none";
             // Display the main content
             document.getElementById("content").style.display = "block";
-        }, 0);
+        }, 1500);
     });
 
         // Scroll indicator animation
