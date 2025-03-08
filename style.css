@@ -86,7 +86,25 @@
       .tokenomics-item:hover {
         filter: blur(0);
         background-color: rgba(255, 255, 255, 0.1); /* highlight background (opsional) */
+        transform: translateY(-2px) scale(1.05);
+        transition-duration: 500ms;
+
       }
+/* <!-- ===========
+  SHAPE DIVIDER
+  ============== --> */
+  .cloud-divider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  .cloud-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+  }
   
       /* ---------- RESPONSIVE LAYOUT ---------- */
       @media (min-width: 576px) {
@@ -111,6 +129,17 @@
       }
 
 
+/* =============
+  HOVER SCALE
+================*/
+    /* Minimal custom CSS for the hover scale effect */
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+  
 /* ===========
 PROGRESS BAR
 ==============*/
@@ -191,6 +220,98 @@ PROGRESS BAR
     }
   }
 
+
+/* =============
+  GALLERY HOVER
+=============== */
+.gallery-item img {
+  transition: transform 0.3s ease;
+
+}
+.gallery-item img:hover {
+  transform: scale(1.05);
+  border: 8px solid #f9f9f9;
+}
+  /* ==========
+    SPACER
+=============== */
+.spacer { 
+  height: 3rem; /* Adjust height as needed */
+  width: 100%; /* For horizontal spacers */
+}
+
+/* ==========
+    COUNTER
+=============*/
+.counter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2 rem 0;
+  }
+
+  .counter-item {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .counter-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+
+  .counter-label {
+    font-size: 1.1rem;
+    color: #718096;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .counter-item {
+      flex-basis: calc(50% - 1rem);
+      min-width: auto;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .counter-container {
+      gap: 0.5rem;
+    }
+    
+    .counter-item {
+      flex-basis: 100%;
+      padding: 1rem;
+    }
+    
+    .counter-number {
+      font-size: 2rem;
+    }
+    
+    .counter-label {
+      font-size: 1rem;
+    }
+  }
+
+  /* Optional Hover Effect */
+  .counter-item:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition-duration: 200ms;
+
+  }
 
     /* =====
     NAV MENU 
