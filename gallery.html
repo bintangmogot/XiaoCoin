@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abstract Image Gallery with Staggered Animation</title>
+  <!-- Bootstrap 5 CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/global-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Baumans&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/sudo-var" rel="stylesheet">
+
+  <style>
+    /* Ensure images fill their boxes (some cropping may occur) */
+    .img-fluid {
+      object-fit: cover;
+    }
+    
+    /* 
+      Initial state: hidden & slightly translated down
+      We'll reveal them one by one with JS 
+    */
+    .gallery-image {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    /* Final state: fully visible & back to original position */
+    .gallery-image.show {
+      opacity: 1;
+      transform: translateY(0);
+      border: 4px solid #f9f9f9;
+      border-radius: 6px;
+    }
+
+    .gallery-image:hover {
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 1024px) {
+      .gallery-image:hover {
+        transform: none;
+            }
+      
+    }
+  </style>
+</head>
+<body>
+<!-- Bootstrap Version -->
+<a href="index.html" class="position-fixed top-0 end-0 mt-4 me-3 " style="z-index: 100;" >
+  <button class="btn-primary rounded-2 fw-bold shadow-sm p-3 px-4" style="text-transform: uppercase; font-size: 1.2rem;">
+  ← BACK TO THE MAIN  
+</button>
+</a>
+
+<div class="container-fluid p-div mx-0 bg-secondary">
+
+  <h3 class="text-center mb-5" style="color:#f9f9f9;"> PAO Gallery</h3>
+  
+  <div class="row g-3">
+    
+    <!-- COLUMN 1 (Left side) -->
+    <div class="col-12 col-lg-6">
+      <div class="row g-3">
+        <!-- Large Image -->
+        <div class="col-12">
+          <img 
+            src="files/music photo/bansanka-tuki..png" 
+            class="img-fluid w-100 gallery-image" 
+            alt="Big Left" 
+            style="height: 350px;"
+          >
+        </div>
+        <!-- Two Smaller Images -->
+        <div class="col-6">
+          <img 
+            src="files/music photo/hana ni bourei-yorushika.jpg" 
+            class="img-fluid w-100 gallery-image" 
+            alt="Small 1" 
+            style="height: 150px;"
+          >
+        </div>
+        <div class="col-6">
+          <img 
+            src="files/music photo/haru-yorushika.png" 
+            class="img-fluid w-100 gallery-image" 
+            alt="Small 2" 
+            style="height: 150px;"
+          >
+        </div>
+      </div>
+    </div>
+    
+    <!-- COLUMN 2 (Right side) -->
+    <div class="col-12 col-lg-6">
+      <div class="row g-3">
+        <!-- Large Image -->
+        <div class="col-12">
+          <img 
+            src="files/music photo/hana ni bourei-yorushika.jpg" 
+            class="img-fluid w-100 gallery-image" 
+            alt="Big Right" 
+            style="height: 350px;"
+          >
+        </div>
+        <!-- Two Smaller Images -->
+        <div class="col-6">
+          <img 
+            src="files/music photo/bansanka-tuki..png" 
+            class="img-fluid w-100 gallery-image" 
+            alt="Small 3" 
+            style="height: 150px;"
+          >
+        </div>
+        <div class="col-6">
+          <img 
+            src="files/music photo/hana ni bourei-yorushika.jpg" 
+            class="img-fluid w-100 gallery-image" 
+            alt="Small 4" 
+            style="height: 150px;"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-column">
+      <!-- Masonry Container -->
+      <div class="masonry gap-4 py-0 d-flex flex-wrap flex-row mx-0 align-items-center justify-content-center">
+        <!-- Image with 4:3 ratio (e.g., 600x450) -->
+        <div class="d-flex masonry-item col-12 col-sm-4 gallery-image" style="height: 500px; width:300px">
+          <img src="files/music photo/haru-yorushika.png" class="img-fluid" alt="4:3">
+        </div>
+        <!-- Image with 1:1 ratio (e.g., 400x400) -->
+        <div class="masonry-item col-12 col-sm-4 gallery-image">
+          <img src="files/XIAO PFP 1.png" class="img-fluid" alt="1:1">
+        </div>
+        <!-- Image with 16:9 ratio (e.g., 640x360) -->
+        <div class="masonry-item col-12 col-sm-4 gallery-image">
+          <img src="files/music photo/aimoraimo-yorushika.jpg" class="img-fluid " alt="16:9">
+        </div>
+        <!-- Image with 9:16 ratio (e.g., 360x640) -->
+        <div class="masonry-item col-12 col-sm-4 gallery-image">
+          <img src="files/music photo/seesaw-yorushika.webp" class="img-fluid" alt="9:16">
+        </div>
+        <!-- Additional images can be added here -->
+      </div>
+  </div>
+  <!-- New Abstract Masonry Gallery Section -->
+
+  <div class="spacer"></div>  <!-- 3rem vertical space -->
+  <div class="spacer"></div>  <!-- 3rem vertical space -->
+
+
+</div>
+
+<!-- Bootstrap JS (optional if you need interactive components) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- STAGGERED FADE-IN SCRIPT -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.gallery-image');
+    
+    // Appear one by one, each with a slight delay
+    images.forEach((img, index) => {
+      setTimeout(() => {
+        img.classList.add('show');
+      }, index * 300); // 300ms delay per item
+    });
+  });
+</script>
+</body>
+</html>
